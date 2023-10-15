@@ -5,7 +5,7 @@
 
 bool hasDoubleConsonants(const std::string& word) {
     // Список англійських приголосних літер
-    const std::string consonants = "bcdfghjklmnpqrstvwxyz";
+    const std::string consonants = "bcdfghjklmnpqrstvwxyzабвгдеєжзиіїйклмнопрстуфхцчшщьюя";
 
     for (int i = 0; i < word.length() - 1; ++i) {
         if (consonants.find(word[i]) != std::string::npos && word[i] == word[i + 1]) {
@@ -17,7 +17,7 @@ bool hasDoubleConsonants(const std::string& word) {
 }
 
 int main() {
-    std::ifstream inputFile("input.txt"); // Ваш файл з текстом
+    std::ifstream inputFile("input.txt");
     std::unordered_set<std::string> uniqueWords;
 
     if (!inputFile) {
